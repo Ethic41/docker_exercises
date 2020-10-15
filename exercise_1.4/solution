@@ -1,0 +1,45 @@
+Script started on 2020-09-11 07:35:26+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="166" LINES="42"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[00m$ clear
+[H[2J[3J]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[00m$ docker run -it --name base[Kh_exercise devopsdockeruh/exec_bash_exercise
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[00m$ docker container ls
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS               NAMES
+980b7c6ed744        devopsdockeruh/exec_bash_exercise   "docker-entrypoint.s…"   45 seconds ago      Up 43 seconds                           bash_exercise
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[00m$ clear
+[H[2J[3J]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[00m$ docker attach [K[K[K[K[K[K[Kexec -it loop[K[K[K[Kdocke[K[K[K[K[K[K[K[Kit bash_exercise bash
+root@980b7c6ed744:/usr/app# ls
+Dockerfile  README.md  index.js  logs.txt
+root@980b7c6ed744:/usr/app# tail -f - f logs.txt 
+Fri, 11 Sep 2020 06:38:14 GMT
+Secret message is:
+"Docker is easy"
+Fri, 11 Sep 2020 06:38:20 GMT
+Fri, 11 Sep 2020 06:38:23 GMT
+Fri, 11 Sep 2020 06:38:26 GMT
+Fri, 11 Sep 2020 06:38:29 GMT
+Secret message is:
+"Docker is easy"
+Fri, 11 Sep 2020 06:38:35 GMT
+Fri, 11 Sep 2020 06:38:38 GMT
+Fri, 11 Sep 2020 06:38:41 GMT
+Fri, 11 Sep 2020 06:38:44 GMT
+Secret message is:
+"Docker is easy"
+Fri, 11 Sep 2020 06:38:50 GMT
+Fri, 11 Sep 2020 06:38:53 GMT
+read escape sequence
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.4[00m$ docker cona[K[K[K[K[K[K[K[K[K[K[Kexit
+exit
+
+Script done on 2020-09-11 07:39:03+01:00 [COMMAND_EXIT_CODE="1"]

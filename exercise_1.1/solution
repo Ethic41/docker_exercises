@@ -1,0 +1,54 @@
+Script started on 2020-09-10 07:10:25+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="166" LINES="42"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ cl[K[Kdocker run -d nginx
+e91a8ffce7e89772359e3c58ec924dbebe1462bd79d410f73a0787f7efc9e360
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ docker run -d nginx
+bbe8f3617f93f44249b403a3b790070c4e08e6e642db58c7ee34ba4e5e98fb60
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ duc[K[Kocker run -d nginx
+e2113968ca790386aeee64bd798803157a6afbbedd244dda93ba508168a3a2ee
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ docker container ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+e2113968ca79        nginx               "/docker-entrypoint.…"   44 seconds ago      Up 43 seconds       80/tcp              sharp_zhukovsky
+bbe8f3617f93        nginx               "/docker-entrypoint.…"   52 seconds ago      Up 50 seconds       80/tcp              nifty_tu
+e91a8ffce7e8        nginx               "/docker-entrypoint.…"   58 seconds ago      Up 57 seconds       80/tcp              recursing_banach
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ dor[Kcker rm sha[K[K[Ke22113 bbe8f
+Error: No such container: e22113
+Error response from daemon: You cannot remove a running container bbe8f3617f93f44249b403a3b790070c4e08e6e642db58c7ee34ba4e5e98fb60. Stop the container before attempting removal or force remove
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ docker rm e22113 bbe8f[1P
+Error response from daemon: You cannot remove a running container e2113968ca790386aeee64bd798803157a6afbbedd244dda93ba508168a3a2ee. Stop the container before attempting removal or force remove
+Error response from daemon: You cannot remove a running container bbe8f3617f93f44249b403a3b790070c4e08e6e642db58c7ee34ba4e5e98fb60. Stop the container before attempting removal or force remove
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ docker stop e22[K113 bbe8f
+e2113
+bbe8f
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ docker rm e22[K113 be[Kbe8f
+e2113
+bbe8f
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ docker ps -a
+CONTAINER ID        IMAGE                                           COMMAND                  CREATED             STATUS                           PORTS                   NAMES
+e91a8ffce7e8        nginx                                           "/docker-entrypoint.…"   2 minutes ago       Up 2 minutes                     80/tcp                  recursing_banach
+73a0f0d06434        nginx                                           "/docker-entrypoint.…"   18 minutes ago      Exited (0) 16 minutes ago                                determined_poitras
+b98e0ea13fc5        nginx                                           "/docker-entrypoint.…"   19 minutes ago      Exited (0) 18 minutes ago                                jolly_mirzakhani
+5943cf222ca9        gcr.io/k8s-minikube/kicbase:v0.0.12-snapshot3   "/usr/local/bin/entr…"   5 days ago          Exited (130) About an hour ago                           minikube
+88e70249c339        nginx                                           "/docker-entrypoint.…"   3 months ago        Exited (255) 5 days ago          0.0.0.0:32768->80/tcp   beautiful_pike
+b35bbfffa107        figlet                                          "/bin/sh -c 'figlet …"   3 months ago        Exited (0) 3 months ago                                  brave_feynman
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ docker images
+REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+dockercoins_worker            latest              b9b649eecb43        3 days ago          51.6MB
+dockercoins_webui             latest              d974e314c3da        3 days ago          218MB
+dockercoins_hasher            latest              e86295d522be        3 days ago          266MB
+dockercoins_rng               latest              9ae1d6bbf8a6        3 days ago          53.4MB
+redis                         latest              41de2cc0b30e        8 days ago          104MB
+gcr.io/k8s-minikube/kicbase   v0.0.12-snapshot3   25ac91b9c8d7        2 weeks ago         952MB
+python                        alpine              44fceb565b2a        4 weeks ago         42.7MB
+ruby                          alpine              b46ea0bc5984        2 months ago        52.3MB
+figlet                        latest              b7a2eb234c90        3 months ago        97.2MB
+busybox                       latest              1c35c4412082        3 months ago        1.22MB
+nginx                         latest              4392e5dad77d        3 months ago        132MB
+ubuntu                        latest              1d622ef86b13        4 months ago        73.9MB
+hello-world                   latest              bf756fb1ae65        8 months ago        13.3kB
+jpetazzo/clock                latest              59e5463e3307        9 months ago        1.22MB
+node                          4-slim              c953ec480e11        2 years ago         211MB
+jpetazzo/crashtest            latest              8f6890774d2a        2 years ago         5.51MB
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.1[00m$ clear[K[K[K[K[Kexit
+exit
+
+Script done on 2020-09-10 07:15:43+01:00 [COMMAND_EXIT_CODE="0"]

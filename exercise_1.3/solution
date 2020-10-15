@@ -1,0 +1,10 @@
+Script started on 2020-09-11 06:50:59+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="166" LINES="42"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.3[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.3[00m$ docker run -it devopsdockeruh/pull_exercise
+[1G[0JGive me the password: [23Gbasics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.3[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.3[00m$ exit
+exit
+
+Script done on 2020-09-11 06:51:26+01:00 [COMMAND_EXIT_CODE="0"]
