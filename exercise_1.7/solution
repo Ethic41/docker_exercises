@@ -1,0 +1,47 @@
+Script started on 2020-10-16 00:26:08+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="166" LINES="44"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.7[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.7[00m$ docker build . -t curler
+Sending build context to Docker daemon  3.584kB
+Step 1/6 : FROM ubuntu:16.04
+ ---> 4b22027ede29
+Step 2/6 : WORKDIR /usr/myapp
+ ---> Running in 99ad62fe9c40
+Removing intermediate container 99ad62fe9c40
+ ---> 85c37df30ea0
+Step 3/6 : COPY app.sh .
+ ---> 63b48f56c98f
+Step 4/6 : RUN apt -y -qq update > /dev/null && apt -y -qq install curl > /dev/null
+ ---> Running in f7e8971fa415
+[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0m[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0m[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mRemoving intermediate container f7e8971fa415
+ ---> acc6988dd20b
+Step 5/6 : RUN chmod +x /usr/myapp/app.sh
+ ---> Running in 4d879bac43cf
+Removing intermediate container 4d879bac43cf
+ ---> 29b3fcc4ad93
+Step 6/6 : CMD [ "/usr/myapp/app.sh" ]
+ ---> Running in fefb3783dd8a
+Removing intermediate container fefb3783dd8a
+ ---> 453c3835eb52
+Successfully built 453c3835eb52
+Successfully tagged curler:latest
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.7[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.7[00m$ docker run -it --name cure[Kler curler
+Input website [terminate input with _ ]:
+helsinki.fi
+_Searching...
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.7[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.7[00m$ exit
+exit
+
+Script done on 2020-10-16 00:34:54+01:00 [COMMAND_EXIT_CODE="0"]
