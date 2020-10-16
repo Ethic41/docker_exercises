@@ -1,0 +1,34 @@
+Script started on 2020-10-16 08:49:01+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="166" LINES="39"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.10[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.10[00m$ docekr [K[K[K[Kker build -[K. -t first_node_image
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  586.8kB
+Step 1/8 : FROM ubuntu:latest
+ ---> 4e2eef94cd6b
+Step 2/8 : WORKDIR /myapp
+ ---> Using cache
+ ---> 52a2be5bc918
+Step 3/8 : COPY frontend-example-docker /myapp/
+ ---> Using cache
+ ---> 8ab4dca0e899
+Step 4/8 : RUN apt -y -qq update > /dev/null && apt -y -qq install curl > /dev/null && curl -sL https://deb.nodesource.com/setup_10.x | bash && apt -y -qq install nodejs > /dev/null
+ ---> Using cache
+ ---> 606283e8b84c
+Step 5/8 : EXPOSE 5000
+ ---> Using cache
+ ---> 87a2472082d1
+Step 6/8 : RUN node -v && npm -v
+ ---> Using cache
+ ---> dfa79ec69e3b
+Step 7/8 : RUN npm install
+ ---> Using cache
+ ---> 9b21e748aaea
+Step 8/8 : CMD [ "npm", "start" ]
+ ---> Using cache
+ ---> 3948df9cb49c
+Successfully built 3948df9cb49c
+Successfully tagged first_node_image:latest
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.10[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.10[00m$ docker run -d -p 5000:5000 --name first_node first_node_imagee[K[Ke[Ke
+2166d8cadad8d2735cf1853a7683d2348ffb2f8f603c90ffdede56085acc9b1f
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.10[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.10[00m$ exit
+exit
+
+Script done on 2020-10-16 08:50:04+01:00 [COMMAND_EXIT_CODE="0"]
