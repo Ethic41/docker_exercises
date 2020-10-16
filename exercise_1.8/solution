@@ -1,0 +1,90 @@
+Script started on 2020-10-16 06:20:22+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="166" LINES="44"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ touch logs.txt
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ docker pull docker pull devopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pdevopsdockeruh/first_volume_exercise[1Pevopsdockeruh/first_volume_exercise
+Using default tag: latest
+latest: Pulling from devopsdockeruh/first_volume_exercise
+
+[1A[2K1c6172af85ee: Already exists [1B
+[1A[2Kb194b0e3c928: Already exists [1B
+[1A[2K1f5ec00f35d5: Already exists [1B
+[1A[2K93b1353672b6: Already exists [1B
+[1A[2K3d7f38db3cca: Already exists [1B
+[1A[2K21e102f9fe89: Already exists [1B
+[1A[2Kd851ffed797c: Already exists [1B
+[1A[2Ka45031e28c68: Already exists [1B
+[1A[2Kca3c1414856f: Already exists [1B
+[1A[2Kf092ecebb4a6: Pulling fs layer [1B
+[1A[2Kb51567d0861f: Pulling fs layer [1B[2A[2Kf092ecebb4a6: Download complete [2B[2A[2Kf092ecebb4a6: Extracting [==================================================>]     109B/109B[2B[1A[2Kb51567d0861f: Downloading [=========================>                         ]     438B/849B[1B[1A[2Kb51567d0861f: Downloading [==================================================>]     849B/849B[1B[1A[2Kb51567d0861f: Verifying Checksum [1B[1A[2Kb51567d0861f: Download complete [1B[2A[2Kf092ecebb4a6: Extracting [==================================================>]     109B/109B[2B[2A[2Kf092ecebb4a6: Pull complete [2B[1A[2Kb51567d0861f: Extracting [==================================================>]     849B/849B[1B[1A[2Kb51567d0861f: Extracting [==================================================>]     849B/849B[1B[1A[2Kb51567d0861f: Pull complete [1BDigest: sha256:38dd790d251fa970e338546f1cc698214dbdbfb13a0b6b057177c20f960f31b2
+Status: Downloaded newer image for devopsdockeruh/first_volume_exercise:latest
+docker.io/devopsdockeruh/first_volume_exercise:latest
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ docker run -v $(pwd)/logs.text[K[K[Kxt:/usr/app/logs.txt --name first [K_volume first_vo[K[K[K[K[K[K[K[Kdocker[K[K[K[K[Kevopsdockeruh/first_volume_exercise
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+^CClosing file
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ ls
+[0m[01;32mlogs.txt[0m  [01;32msolution[0m
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ cat logs.txt 
+Fri, 16 Oct 2020 05:24:25 GMT
+Fri, 16 Oct 2020 05:24:28 GMT
+Fri, 16 Oct 2020 05:24:31 GMT
+Fri, 16 Oct 2020 05:24:34 GMT
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ cat logs.txt ls[Kdocker run -v $(pwd)/logs.txt:/usr/app/logs.txt --name first_volume devopsdockeruh/first_volume_exercise[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-v $(pwd)/logs.txt:/usr/app/logs.txt --name first_volume devopsdockeruh/first_volume_exercise[A]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ [C[C[C[C[C[C[C[C[C[C[C[Cd-v $(pwd)/logs.txt:/usr/app/logs.txt --name first_volume devopsdockeruh/first_volume_exercise[A]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C -v $(pwd)/logs.txt:/usr/app/logs.txt --name first_volume devopsdockeruh/first_volume_exercise[A]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_ devopsdockeruh/first_volume_exercise[A]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1 devopsdockeruh/first_volume_exercise[A]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+32652761d701649be4264ad1b67df86202dba3380ce2a9b1239af32e52ec7557
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ ls
+[0m[01;32mlogs.txt[0m  [01;32msolution[0m
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ cat logs.txt 
+Fri, 16 Oct 2020 05:25:28 GMT
+Fri, 16 Oct 2020 05:25:31 GMT
+Fri, 16 Oct 2020 05:25:34 GMT
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ cat logs.txt 
+Fri, 16 Oct 2020 05:25:28 GMT
+Fri, 16 Oct 2020 05:25:31 GMT
+Fri, 16 Oct 2020 05:25:34 GMT
+Fri, 16 Oct 2020 05:25:37 GMT
+Secret message is:
+"Volume bind mount is easy"
+Fri, 16 Oct 2020 05:25:43 GMT
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ cat logs.txt 
+Fri, 16 Oct 2020 05:25:28 GMT
+Fri, 16 Oct 2020 05:25:31 GMT
+Fri, 16 Oct 2020 05:25:34 GMT
+Fri, 16 Oct 2020 05:25:37 GMT
+Secret message is:
+"Volume bind mount is easy"
+Fri, 16 Oct 2020 05:25:43 GMT
+Fri, 16 Oct 2020 05:25:46 GMT
+Fri, 16 Oct 2020 05:25:49 GMT
+Fri, 16 Oct 2020 05:25:52 GMT
+Secret message is:
+"Volume bind mount is easy"
+Fri, 16 Oct 2020 05:25:58 GMT
+Fri, 16 Oct 2020 05:26:01 GMT
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ cat logs.txt 
+Fri, 16 Oct 2020 05:25:28 GMT
+Fri, 16 Oct 2020 05:25:31 GMT
+Fri, 16 Oct 2020 05:25:34 GMT
+Fri, 16 Oct 2020 05:25:37 GMT
+Secret message is:
+"Volume bind mount is easy"
+Fri, 16 Oct 2020 05:25:43 GMT
+Fri, 16 Oct 2020 05:25:46 GMT
+Fri, 16 Oct 2020 05:25:49 GMT
+Fri, 16 Oct 2020 05:25:52 GMT
+Secret message is:
+"Volume bind mount is easy"
+Fri, 16 Oct 2020 05:25:58 GMT
+Fri, 16 Oct 2020 05:26:01 GMT
+Fri, 16 Oct 2020 05:26:04 GMT
+Fri, 16 Oct 2020 05:26:08 GMT
+Secret message is:
+"Volume bind mount is easy"
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ ls
+[0m[01;32mlogs.txt[0m  [01;32msolution[0m
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.8[00m$ exit
+exit
+
+Script done on 2020-10-16 06:26:30+01:00 [COMMAND_EXIT_CODE="0"]
