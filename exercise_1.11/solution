@@ -1,0 +1,38 @@
+Script started on 2020-10-16 12:20:38+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="166" LINES="44"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[00m$ clear
+[H[2J[3J]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[00m$ docker build . -t backend-example
+Sending build context to Docker daemon    277kB
+Step 1/7 : FROM ubuntu:16.04
+ ---> 4b22027ede29
+Step 2/7 : WORKDIR /myapp
+ ---> Using cache
+ ---> c195a42ee79a
+Step 3/7 : COPY backend-example-docker /myapp/
+ ---> Using cache
+ ---> 2f0d2b3462fd
+Step 4/7 : RUN apt -y update > /dev/null && apt -y install curl > /dev/null && curl -sL https://deb.nodesource.com/setup_10.x | bash && apt -y install nodejs > /dev/null
+ ---> Using cache
+ ---> ae10a79936ec
+Step 5/7 : EXPOSE 8000
+ ---> Using cache
+ ---> db22416de5ec
+Step 6/7 : RUN npm install
+ ---> Using cache
+ ---> bb640a6c2457
+Step 7/7 : CMD [ "npm", "start"]
+ ---> Using cache
+ ---> 7ef7bb67a3be
+Successfully built 7ef7bb67a3be
+Successfully tagged backend-example:latest
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[00m$ docker run -d -v $()p)w)d)[C/logs.txt [K:/myapp/[K/logs.txt -p 8080[K[K00:8000 --name backend-one [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K1 b ackend-example
+25e4ccfbc4443d9e6fbc6544bf040c7ce753ec6d7455da5c2f913673072eebf2
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[00m$ cat logs.txt 
+10/16/2020, 11:17:25 AM: Connection received in root
+10/16/2020, 11:17:59 AM: Connection received in root
+10/16/2020, 11:18:22 AM: Connection received in root
+10/16/2020, 11:22:40 AM: Connection received in root
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_1.11[00m$ exit
+exit
+
+Script done on 2020-10-16 12:22:55+01:00 [COMMAND_EXIT_CODE="0"]
