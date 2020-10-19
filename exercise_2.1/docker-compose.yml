@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+    first_volume_exercise:
+      image: devopsdockeruh/first_volume_exercise
+      volumes:
+          - ./logs.txt:/usr/app/logs.txt
+      container_name: first_volume_1
+      
