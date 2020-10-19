@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+    frontend:
+      image: frontend-final
+      ports:
+          - 5000:5000
+      container_name: frontend_1
+    
+    backend:
+      image: backend-final
+      ports:
+          - 8000:8000
+      container_name: backend_1
