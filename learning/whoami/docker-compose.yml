@@ -3,5 +3,12 @@ version: '3.5'
 services:
     whoami:
       image: jwilder/whoami
+      environment:
+        - VIRTUAL_HOST=whoami.colasloth.com
+
+    proxy:
+      image: jwilder/nginx-proxy
+      volumes:
+          - /var/run/docker.sock:/tmp/docker.sock:ro
       ports:
-          - 8000
+          - 80:80                
