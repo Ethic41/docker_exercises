@@ -1,0 +1,25 @@
+Script started on 2020-10-22 11:00:04+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="166" LINES="44"]
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4[00m$ cd [K[K[Kclear
+[H[2J[3J]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4[00m$ cd scaling-exercise/
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4/scaling-exercise[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4/scaling-exercise[00m$ ls
+[0m[01;34mcalculator[0m  [01;34mcompute[0m  [01;32mdocker-compose.yml[0m  [01;34mload-balancer[0m
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4/scaling-exercise[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4/scaling-exercise[00m$ docker-compose up --scale[K[K[K[K[K[Kd --scale compute=10
+Creating network "scaling-exercise_default" with the default driver
+Creating calculator ... 
+Creating load-balancer ... 
+Creating scaling-exercise_compute_1  ... 
+Creating scaling-exercise_compute_2  ... 
+Creating scaling-exercise_compute_3  ... 
+Creating scaling-exercise_compute_4  ... 
+Creating scaling-exercise_compute_5  ... 
+Creating scaling-exercise_compute_6  ... 
+Creating scaling-exercise_compute_7  ... 
+Creating scaling-exercise_compute_8  ... 
+Creating scaling-exercise_compute_9  ... 
+Creating scaling-exercise_compute_10 ... 
+[33mWARNING[0m: Connection pool is full, discarding connection: localhost
+[12A[2KCreating calculator                  ... [32mdone[0m[12B[6A[2KCreating scaling-exercise_compute_5  ... [32mdone[0m[6B[4A[2KCreating scaling-exercise_compute_7  ... [32mdone[0m[4B[1A[2KCreating scaling-exercise_compute_10 ... [32mdone[0m[1B[2A[2KCreating scaling-exercise_compute_9  ... [32mdone[0m[2B[3A[2KCreating scaling-exercise_compute_8  ... [32mdone[0m[3B[5A[2KCreating scaling-exercise_compute_6  ... [32mdone[0m[5B[8A[2KCreating scaling-exercise_compute_3  ... [32mdone[0m[8B[7A[2KCreating scaling-exercise_compute_4  ... [32mdone[0m[7B[9A[2KCreating scaling-exercise_compute_2  ... [32mdone[0m[9B[10A[2KCreating scaling-exercise_compute_1  ... [32mdone[0m[10B[11A[2KCreating load-balancer               ... [32mdone[0m[11B]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4/scaling-exercise[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4/scaling-exercise[00m$ cd ..
+]0;dahir@DahirVM: ~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4[01;32mdahir@DahirVM[00m:[01;34m~/workspace/drived/Codes/learningDocker/docker_exercises/exercise_2.4[00m$ exit
+exit
+
+Script done on 2020-10-22 11:01:25+01:00 [COMMAND_EXIT_CODE="0"]
