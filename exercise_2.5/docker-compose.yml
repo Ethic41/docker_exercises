@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+    backend:
+      image: backend-final
+      environment: 
+        - REDIS=redis
+        - REDIS_PORT=6379
+      ports:
+          - 8000:8000
+      restart: unless-stopped
+      container_name: backend_node
+    
+    frontend:
+      image: frontend-final
+      ports:
+          - 5000:5000
+      container_name: frontend_node
+    
+    redis:
+      image: redis
+      container_name: redis_node
