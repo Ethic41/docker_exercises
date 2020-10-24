@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+          - POSTGRES_PASSWORD=example
+      volumes:
+          - database:/var/lib/postgresql/data
+    
+    redmine:
+      image: redmine
+      environment:
+          - REDMINE_DB_POSTGRES=db
+          - REDMINE_DB_PASSWORD=example
+      ports:
+          - 9999:3000
+      volumes:
+          - files:/usr/src/redmine/files
+      depends_on:
+          - db
+
+volumes:
+    database:
+    files:
+
